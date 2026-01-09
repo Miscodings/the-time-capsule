@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 A full-stack retro technology e-commerce marketplace built with **Next.js (App Router)**, **MongoDB**, **Stripe** and **Clerk**.  
 Browse, search, and filter products by category and subcategory, add items to cart, and securely checkout using Stripe.
 
-Retro Tech Market is intentionally designed with a **Windows 95–inspired UI aesthetic**. 
+The Time Capsule is intentionally designed with a **Windows 95–inspired UI aesthetic**. 
 The goal was to visually match the era of the products being sold, reinforcing nostalgia through chunky buttons, bordered panels, pixel-like layouts, and muted system colors.
 
 This project was created to:
