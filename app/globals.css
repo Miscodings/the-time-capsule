@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-desktop: #008080;        /* Win95 desktop teal */
+  --color-panel: #c0c0c0;          /* Toolbar gray */
+  --color-panel-light: #e0e0e0;
+  --color-border-dark: #808080;
+  --color-border-light: #ffffff;
+  --color-blue: #000080;
+
+  --font-retro: "Pixelated MS Sans Serif", Tahoma, Verdana, Arial, sans-serif;
+}
+
+body {
+  background: var(--color-desktop);
+  color: black;
+  font-family: "Pixelify Sans", system-ui, sans-serif;
+}
+
+@layer utilities {
+  .win95-panel {
+    background: var(--color-panel);
+    border: 2px solid var(--color-border-dark);
+    box-shadow:
+      inset -2px -2px 0 var(--color-border-light),
+      inset 2px 2px 0 var(--color-border-dark);
+  }
+
+  .win95-button {
+    background: var(--color-panel-light);
+    border: 2px solid var(--color-border-dark);
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: all 120ms ease;
+  }
+
+  .win95-button:hover {
+    background: #dcdcdc;
+    transform: translateY(-1px);
+  }
+
+  .win95-button:active {
+    transform: translateY(1px);
+    box-shadow:
+      inset 2px 2px 0 var(--color-border-dark),
+      inset -2px -2px 0 var(--color-border-light);
+  }
+
+  .win95-card {
+    background: var(--color-panel);
+    border: 2px solid var(--color-border-dark);
+    box-shadow:
+      inset -2px -2px 0 var(--color-border-light),
+      inset 2px 2px 0 var(--color-border-dark);
+    padding: 8px;
+    transition: transform 120ms ease, filter 120ms ease;
+  }
+
+  .win95-card:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.03);
+  }
+
+  .win95-card:active {
+    transform: translateY(0);
+  }
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.win95-input {
+  @apply px-3 py-2 border-2 border-border-dark bg-white;
+  @apply focus:outline-none focus:border-blue-400;
+}
