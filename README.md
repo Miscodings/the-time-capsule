@@ -52,23 +52,26 @@ The result is a marketplace that feels authentic to the technology it sells.
 
 Create a `.env.local` file in the root of the project:
 
-```
 # Clerk
+```
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
 CLERK_SECRET_KEY=sk_test_...
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-
+```
 # MongoDB
+```
 MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/<dbname>
-
+```
 # Stripe
+```
 STRIPE_SECRET_KEY=sk_test_...
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
-
+```
 # App
+```
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
-
+```
 ---
 
 ## 📁 To run:
